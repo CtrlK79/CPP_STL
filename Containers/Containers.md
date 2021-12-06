@@ -3,19 +3,19 @@
 ## Sequence Containers
 1. Vectors
 
-A *vector* manages its elements in a dynamic way. It enables random access by the correcponding index of elements. Appending and removing elements at the end of the array is very fast. It doesn't provide 'push_front()' function.
+A __*vector*__ manages its elements in a dynamic way. It enables random access by the correcponding index of elements. Appending and removing elements at the end of the array is very fast. It doesn't provide 'push_front()' function.
 
-2. Deques
+1. Deques
 
-A *deque* also manages its elements in a dynamic way and enables random access, but it is useful for bi-direction(front and end) appending and removing elements. It provides 'push_front()' function.
+A __*deque*__ also manages its elements in a dynamic way and enables random access, but it is useful for bi-direction(front and end) appending and removing elements. It provides 'push_front()' function.
 
 3. Arrays
 
-An *array* manages its elements in an array of fixed size, which is different from vectors and deques. Therefore, the number of elements also a part of the type of an array.
+An __*array*__ manages its elements in an array of fixed size, which is different from vectors and deques. Therefore, the number of elements also a part of the type of an array.
 
 4. Lists
 
-A *list* is implemented as a doubly linked list of elements, which means that each element has its own segment of memoey and refers to its predecessor and its successor. It doesn't provide random access. To access the 5th element, we have to follow the chain of elements' links.
+A __*list*__ is implemented as a doubly linked list of elements, which means that each element has its own segment of memoey and refers to its predecessor and its successor. It doesn't provide random access. To access the 5th element, we have to follow the chain of elements' links.
 
 5. Forward Lists
 
