@@ -34,12 +34,14 @@ A __*set*__ is a collection where all the elemnts are sorted according to their 
 
 a __*map*__ is a key/value pair. A __*multimap*__ allows duplicates(a key can be assigned to different values), and newly inserted elements are inserted at the end of equivalent elements that multimaps already contain.
 
+---
 ## Unordered Containers
 
 In unordered containers, order is not determined and it is not important. The fact that there is a specific element is the only important.
 
 - Unordered sets/multisets, unordered maps/multimaps
 
+---
 ## Other types...
 
 - Associative arrays : an array whose index is not an integer value.
