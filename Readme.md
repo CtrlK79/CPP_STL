@@ -14,7 +14,7 @@ This type of containers has its own sorting strategy determined by inserting ord
 
 A __*vector*__ manages its elements in a dynamic way. It enables random access by the correcponding index of elements. Appending and removing elements at the end of the array is very fast. It doesn't provide 'push_front()' function.
 
-It has a _capacity()_ function as a member function, and it is a unique property of vector container. it [here](../BrainStimulus/6_1.cpp)
+It has a _capacity()_ function as a member function, and it is a unique property of vector container. You can [here](./BrainStimulus/6_1.cpp) how a vector works... vector reallocate memory enough to contain several more elements. My compiler reallocate memory two times more than the last reallocation.
 
 - Deques
 

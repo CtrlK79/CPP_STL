@@ -6,7 +6,8 @@ int main()
 {
     vector<int> v;
 
-    v.push_back(10); v.push_back(20); v.push_back(30); v.push_back(40); v.push_back(50);
+    for(auto i=0;i<5;i++)
+        v.push_back(10*(i+1));
 
     // size() : returns the number of elements
     // capacity() : returns the size of the allocated memory
@@ -17,4 +18,23 @@ int main()
     cout<<"size(): "<<v.size()<<endl;
     cout<<"capacity(): "<<v.capacity()<<endl;
     cout<<"max_size(): "<<v.max_size()<<endl;
+    cout<<endl;
+
+    // capacity()
+    vector<int> vv;
+    for(auto i=0;i<10;i++)
+    {
+        cout<<"size: "<<vv.size()<<", capacity: "<<vv.capacity()<<endl;
+        vv.push_back(10*(i+1));
+    }
+    cout<<endl;
+
+    // reserve() : allocate memory by user
+    vector<int> vvv;
+    vvv.reserve(10);
+    for(auto i=0;i<10;i++)
+    {
+        cout<<"size: "<<vvv.size()<<", capacity: "<<vvv.capacity()<<endl;
+        vvv.push_back(10*(i+1));
+    }
 }
