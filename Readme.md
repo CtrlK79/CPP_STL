@@ -10,23 +10,33 @@
 
 This type of containers has its own sorting strategy determined by inserting order.
 
-- Vectors
+- __Vectors__
 
-A __*vector*__ manages its elements in a dynamic way. It enables random access by the correcponding index of elements. Appending and removing elements at the end of the array is very fast. It doesn't provide 'push_front()' function.
+A __*vector*__ manages its elements in a dynamic way. It enables random access by the correcponding index of elements. Appending and removing elements at the end of the array is fast. It uses a memory block to contain elements. It doesn't support 'push_front()' function.
 
-It has a _capacity()_ function as a member function, and it is a unique property of vector container. You can [here](./BrainStimulus/6_1.cpp) how a vector works... vector reallocate memory enough to contain several more elements. My compiler reallocate memory two times more than the last reallocation.
+It has a _capacity()_ function as a member function, and it is a unique property of vector container. Vector reallocate memory enough to contain several more elements. My compiler reallocate memory two times more than the last reallocation.
 
-- Deques
+__remarkable member functions__ : size(), capacity(), max_size(), begin(), end(), rbegin(), rend(), reserve(), push_back(), pop_back(), resize(), clear(), empty(), swap(), front(), back(), assign(), insert(), erase()
 
-A __*deque*__ also manages its elements in a dynamic way and enables random access, but it is useful for bi-direction(front and end) appending and removing elements. It provides 'push_front()' function.
+** calling insert(), erase() uses a lot of resources... so it'd be better to choose another container if your system does so.
 
-- Arrays
+- __Deques__
+
+A __*deque*__ is a very similar to vector, which manages its elements in a dynamic way and enables random access. It is useful for bi-direction(front and end) appending and removing elements. Different from a vector, it uses several memory blocks to contain elements. It doesn't change memory address, but add another block to sustain added elements. It provides 'push_front()' function.
+
+Due to its memory allocation strategy, insert() and erase() perform way better than vector.
+
+__remarkable member functions__ : same with vector's... +) push_front(), pop_front()
+
+- __Lists__
+
+A __*list*__ is implemented as a doubly linked list of elements, which means that each element has its own segment of memory and refers to its predecessor and its successor. It doesn't provide random access. To access the 5th element, we have to follow the chain of elements' links.
+
+__remarkable member functions__ : same with deque's... +) splice(), merge(), unique(), sort(), remove()... -) [] operator, at()
+
+- __Arrays__
 
 An __*array*__ manages its elements in an array of fixed size, which is different from vectors and deques. Therefore, the number of elements also a part of the type of an array.
-
-- Lists
-
-A __*list*__ is implemented as a doubly linked list of elements, which means that each element has its own segment of memoey and refers to its predecessor and its successor. It doesn't provide random access. To access the 5th element, we have to follow the chain of elements' links.
 
 - Forward Lists
 
@@ -39,7 +49,11 @@ Associative containers sort their elements automatically according to a certain 
 
 - Sets and Multisets
   
-A __*set*__ is a collection where all the elemnts are sorted according to their own values. __*Multiset*__ is same with a set except it allows duplicates. 
+A __*set*__ is a collection where all the elemnts are sorted according to their own values. __*Multiset*__ is same with a set except it allows duplicates.
+
+Set consists of key values. it doesn't support push_back(), push_support(), front(), back(), pop_back(), pop_front()... It can add a key value by using insert(). The pre-determined sorting criteria is less.
+
+__All the associative containers(set, multiset, map, multimap) provide the same interface and member functions...__
 
 - Maps and Multimaps
 
