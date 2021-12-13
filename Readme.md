@@ -42,7 +42,6 @@ An __*array*__ manages its elements in an array of fixed size, which is differen
 
 Since C++11, *forward lists* are provided as a singly linked list. Each element refers only to its successor. Therefore, it doesn't support functions which move backword or would cause a performance penalty.
 
----
 ### Associative Containers
 
 Associative containers sort their elements automatically according to a certain criterion which is pre-determined. Sets and multisets use values, and maps and multimaps use keys to sort the values.
@@ -59,21 +58,18 @@ __All the associative containers(set, multiset, map, multimap) provide the same 
 
 a __*map*__ is a key/value pair. A __*multimap*__ allows duplicates(a key can be assigned to different values), and newly inserted elements are inserted at the end of equivalent elements that multimaps already contain.
 
----
 ### Unordered Containers
 
 In unordered containers, order is not determined and it is not important. The fact that there is a specific element is the only important.
 
 - Unordered sets/multisets, unordered maps/multimaps
 
----
 ### Other types...
 
 - Associative arrays : an array whose index is not an integer value.
 - String
 - C-style arrays
 - Containers adapters : stack(LIFO, last-in-first-out), queue(FIFO, first-in-first-out), priority queue
-
 
 ---
 ## Iterators
