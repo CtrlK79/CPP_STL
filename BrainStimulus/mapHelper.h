@@ -1,13 +1,12 @@
 #include <iostream>
-#include <set>
-#include <typeinfo>
+#include <map>
 using namespace std;
 
 template <typename T>
-void ShowAll(const T& ref)
+void ShowAll(const T& m)
 {
-    for(auto i=ref.begin(); i!=ref.end(); ++i)
-        cout<<*i<<' ';
+    for(auto iter=m.begin(); iter!=m.end(); ++iter)
+        cout<<'('<<iter->first<<','<<iter->second<<") ";
     cout<<endl;
 }
 

@@ -2,10 +2,7 @@
 
 int main()
 {
-    int sectorNum = 0;
-
-
-    SplitSector(++sectorNum);
+    SplitSector();
     set<int> s1;
     s1.insert(50); s1.insert(30); s1.insert(80); s1.insert(40);
     s1.insert(10); s1.insert(70); s1.insert(90); s1.insert(50); // return type of insert() is bool...
@@ -19,7 +16,7 @@ int main()
     cout<<*ist100.first<<", "<<*ist50.first<<endl;
 
 
-    SplitSector(++sectorNum);
+    SplitSector();
     set<int> s2;
     pair<set<int>::iterator, bool> pr;
 
@@ -32,14 +29,14 @@ int main()
     ShowAll(s2);
 
 
-    SplitSector(++sectorNum);
+    SplitSector();
     set<int, greater<int>> s3; // set sorting criteria to greater<int>
     for(auto i=0; i<7; ++i)
         s3.insert(10*(i+1)+5*(i%2));
     ShowAll(s3);
 
 
-    SplitSector(++sectorNum);
+    SplitSector();
     set<int, less<int>> s_less;
     set<int, greater<int>> s_greater;
 
@@ -53,7 +50,7 @@ int main()
     cout<<TorF(g_cmp(10, 20))<<endl; // 10 > 20
 
 
-    SplitSector(++sectorNum);
+    SplitSector();
     set<int> s4;
     s4.insert(50); s4.insert(30); s4.insert(80); s4.insert(40);
     s4.insert(10); s4.insert(70); s4.insert(90);
