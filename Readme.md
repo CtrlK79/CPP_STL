@@ -84,16 +84,69 @@ There are 5 types:
 4. bidirectional iterator
 5. random access iterator
 
----
 ### Operators
 - __Operator *__ returns the element of the current position. We can access members of the element by using ->.
 - __Opeartor ++__ lets the iterator step forward to the next element.
 - __Operators ==__ and __!=__ returns whether two iterators represent the same position.
 - __Operator =__ assigns an iterator.
 
----
 ### Functions
 - __begin()__ returns an iterator that represents the beginning of the elements in the container.
 - __end()__ returns an iterator that represents the end of the elements in the container. The end is the position behind the last element.
 
 These functions define half-open range that includes the first element but excludes the last... there are two key advantages of it: 1) it makes for loop convenient. 2) it avoids special handling for empty ranges... because for empty ranges, begin() is equal to end().
+
+---
+## Algorithms
+
+### Nonmodifying algorithms
+
+Nonmodifying algorithms don't change elements...
+
+- return iter : adjacent_find(); find(), find_if(); find_end(), search(), search_n(); find_first_of(); max_element(), min_element(); mismatch(); 
+- return bool : equal(); lexicographical_compare(); 
+- return int : count(), count_if(); 
+- others : for_each(); 
+
+### Modifying algorithms
+
+These algorithms change elements of a container. It works in 'overwrite mode'... it means that to make it work, there should be pre-allocated memory...
+
+- return iter : copy(), copy_backward(); transform()...it works based on the return value of the function object. its inputs are iterators from 2 containers.; merge(); replace_copy(), replace_copy_if(); 
+- others : fill(), fill_n(); for_each()...it ignores the return value of the function object, just call the function based on each element. Its input is each element of a container according to the input iterator; generate(), generate_n()...it works based on the return value of the function object; iter_swap(); replace(), replace_if(); swap_ranges(); 
+
+### Removing algorithms
+
+These are special cases of modifying algorithms. These don't change the size of the container, but these just overwrite the memory by other values...
+
+- return iter : remove(), remove_if(), remove_copy(), remove_copy_if(); unique(); 
+- others : erase();
+
+### Mutating algorithms
+
+These change the order of the elements.
+
+- return iter : partition(), stable_partition(); 
+- others : next_permutation(), prev_permutation(); random_shuffle(); reverse(), reverse_copy(); rotate()
+
+### Sorting algorithms
+
+These algorithms are special cases of mutating algorithms. These change the order of elements and sort those based on a specific standard.
+
+- heap related : make_heap(), push_heap(), pop_heap(), sort_heap()... heap is a binary tree data structure.
+- others : nth_element(); sort(), stable_sort(), partial_sort(), partial_sort_copy(); 
+
+### Sorted range algorithms
+
+These algorithms work only on sorted range. In these algorithms, it doesn't use == but !(<) && !(>) in judging equivalance.
+
+- return iter : lower_bound(), upper_bound(); equal_range()...it returns pair\<iter, iter>;  merge(); set_union(), set_intersection(), set_difference(), set_symmetric_difference();
+- return bool : binary_search(); includes();
+- others : inplace_merge();
+
+### Numeric algorithms
+
+There algorithms are defined in \<numeric> header. These are related to numerical calculations.
+
+- return iter : adjacent_difference(); partial_sum();
+- return int, double, ... : accumulate(); inner_product(); 
