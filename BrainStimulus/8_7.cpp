@@ -2,6 +2,7 @@
 #include <numeric>
 #include <vector>
 #include "algHelper.h"
+using namespace common;
 using namespace alg8_7;
 
 int main()

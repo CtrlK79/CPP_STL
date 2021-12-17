@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <ctime>
 #include "algHelper.h"
+using namespace common;
 using namespace alg8_4;
 
 int main()

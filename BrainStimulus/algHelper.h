@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-namespace std
+namespace common
 {
     template <typename T>
     void Print(const T& n)

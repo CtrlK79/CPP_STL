@@ -2,6 +2,7 @@
 // when it performs equivalance, it doesn't use == but !(<) && !(>)
 #include <vector>
 #include "algHelper.h"
+using namespace common;
 using namespace alg8_6;
 
 int main()

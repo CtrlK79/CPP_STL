@@ -4,6 +4,7 @@
 #include <vector>
 #include <typeinfo>
 #include "algHelper.h"
+using namespace common;
 using namespace alg8_5;
 
 int main()

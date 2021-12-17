@@ -150,3 +150,9 @@ There algorithms are defined in \<numeric> header. These are related to numerica
 
 - **return iter** : adjacent_difference(); partial_sum();
 - **return int, double, ...** : accumulate(); inner_product(); 
+
+---
+
+## Function Objects
+
+Function objects, a.k.a. functor, are objects overloading operator().

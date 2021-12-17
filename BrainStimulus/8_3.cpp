@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "algHelper.h"
+using namespace common;
 using namespace alg8_3;
 
 int main()
