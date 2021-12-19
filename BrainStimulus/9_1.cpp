@@ -2,7 +2,7 @@
 using namespace common;
 using namespace fo9_1;
 /*
- * <Arithemetic operator objects>
+ * <Arithemetic>
  * plus<T> : binary operator +
  * minus<T> : binary operator -
  * multiplies<T> : binary operator *

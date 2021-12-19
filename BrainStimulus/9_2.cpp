@@ -2,7 +2,7 @@
 using namespace common;
 using namespace fo9_2;
 /*
- * <Comparison operator objects>
+ * <Comparison>
  * equal_to<T> : binary operator ==
  * not_equal_to<T> : binary operator !=
  * less<T> : binary operator <

@@ -73,6 +73,7 @@ In unordered containers, order is not determined and it is not important. The fa
 
 ---
 ## Iterators
+
 Though we can process all elements by using a range-based for loop(since C++11), to find a specific element, processing all elements is too expensive. An __*iterator*__ is an object(similar to a smart pointer) to fulfill this need, by representing positions of elements in a container.
 
 Iterator gives users consistent way to access the elements in different containers. Thanks to iterators, an algorithm is independent from a specific container.
@@ -83,6 +84,8 @@ There are 5 types:
 3. forward iterator
 4. bidirectional iterator
 5. random access iterator
+
+--> vector/deque - support 1~5; list/(multi)set/(multi)map - support 1~4;
 
 ### Operators
 - __Operator *__ returns the element of the current position. We can access members of the element by using ->.
@@ -156,3 +159,34 @@ There algorithms are defined in \<numeric> header. These are related to numerica
 ## Function Objects
 
 Function objects, a.k.a. functor, are objects overloading operator().
+
+### General Function Objects
+1. Arithmetic
+- plus<T> : binary operator +
+- minus<T> : binary operator -
+- multiplies<T> : binary operator *
+- divides<T> : binary operator /
+- modulus<T> : binary operator %
+- negate<T> : unary operator -
+2. Comparison
+- equal_to<T> : binary operator ==
+- not_equal_to<T> : binary operator !=
+- less<T> : binary operator <
+- less_equal<T> : binary operator <=
+- greater<T> : binary operator >
+- greater_equal<T> : binary operator >=
+3. Logical
+- logical_and<T> : binary operator &&
+- logical_or<T> : binary operator ||
+- logical_not<T> : unary operator !
+
+### Function Adaptors
+1. Binder
+- bind1st : fix the first argument of binary function
+- bind2nd : fix the second argument of binary function
+2. Nagator
+- not1 : unary predicate
+- not2 : binary predicate
+3. Function Adaptors
+- ptr_fun : global function to  -> functor
+- mem_fun(by the object), mem_fun_ref(by the address of the object) : member function -> functor
